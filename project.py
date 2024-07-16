@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPixmap
-from hangman import Ui_MainWindow
+from hangmanblack import Ui_MainWindow
 from datastrore import Datastore
 
 class MainWindow:
@@ -65,7 +65,7 @@ class MainWindow:
 
     def buttons(self):
        
-        self.ui.HintLbl.clicked.connect(lambda : self.new_word())
+        self.ui.pushButton.clicked.connect(lambda : self.new_word())
         self.ui.Abtn.clicked.connect(lambda : self.letter(self.ui.Abtn))
         self.ui.Bbtn.clicked.connect(lambda : self.letter(self.ui.Bbtn))
         self.ui.Cbtn.clicked.connect(lambda : self.letter(self.ui.Cbtn))
